@@ -1,7 +1,6 @@
 {
-  "name": "kaihatsudojo",
-  "version": "0.1.0",
-  "private": true,
+  "name": "anohitogacha-frontend",
+  "license": "UNLICENSED",
   "dependencies": {
     "bootstrap": "^5.2.1",
     "node-sass": "^7.0.3",
