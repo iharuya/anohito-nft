@@ -3,5 +3,5 @@
 ## 開発
 
 - `yarn` 依存関係のインストール
-- `yarn start` Reactのサーバーを起動
+- `yarn dev` 開発用サーバー（vite）の起動
 - `yarn fix` コードの整形

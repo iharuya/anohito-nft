@@ -1,4 +1,6 @@
 import { Link, NavLink } from "react-router-dom"
+import { ConnectKitButton } from "connectkit"
+
 export const Header = () => {
   return (
     <div>
@@ -30,6 +32,9 @@ export const Header = () => {
                   <NavLink to="myitems" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
                     マイアイテム
                   </NavLink>
+                </li>
+                <li>
+                  <ConnectKitButton label="ウォレットでログイン" showBalance={true} />
                 </li>
               </ul>
             </div>
