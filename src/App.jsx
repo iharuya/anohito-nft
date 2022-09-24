@@ -1,22 +1,32 @@
-import { Header } from "./components/Header"
-import { Background } from "./components/Background"
-import { Footer } from "./components/Footer"
-import { Home } from "./Home"
-import { Result } from "./Result"
-import { Item } from "./Item"
-import "./styles/App.scss"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { Root } from "./routes/Root"
+import { Index } from "./routes/Index"
+import { Gacha } from "./routes/Gacha"
+import { MyItems } from "./routes/MyItems"
+import { Error } from "./routes/Error"
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Index />
+      },
+      {
+        path: "gacha",
+        element: <Gacha />,
+      },
+      {
+        path: "myitems",
+        element: <MyItems />,
+      },
+    ],
+  },
+])
 
 export const App = () => {
-  return (
-    <>
-      <Header />
-      <Background />
-      <main style={{ minHeight: "100vh" }}>
-        <div className="container text-light">
-          <h1>Entry point here</h1>
-        </div>
-      </main>
-      <Footer />
-    </>
-  )
+  return <RouterProvider router={router} />
 }
