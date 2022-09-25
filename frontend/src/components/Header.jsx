@@ -11,7 +11,7 @@ const verticalSpacerStyle = {
 export const Header = () => {
   return (
     <div>
-      <header className="w-100 fixed-top">
+      <header className="w-100 fixed-top  border-bottom border-3 shadow">
         <nav className="navbar navbar-dark navbar-expand bg-primary text-light py-0">
           <div className="container-fluid">
             <div>
