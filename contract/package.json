@@ -1,5 +1,5 @@
 {
-  "name": "anohitogacha-contract",
+  "name": "anohito-nft-contract",
   "license": "UNLICENSED",
   "scripts": {
     "fix": "prettier --write .",

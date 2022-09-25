@@ -1,4 +1,4 @@
-# Kaihatsu Dojo 2022/09 - Front-end
+# Front-end
 
 ## 開発
 

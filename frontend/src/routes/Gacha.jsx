@@ -73,7 +73,7 @@ export const Gacha = () => {
 
   return (
     <div className="text-center mt-5">
-      <h1 className="mb-4">あの人ガチャ</h1>
+      <h1 className="mb-4">あの人NFTガチャ</h1>
       {/* countdown */}
       <div className="mb-4">
         <ClipLoader loading={!deadline} color="#cdcdcd" />

@@ -1,4 +1,4 @@
-# Kaihatsu Dojo 2022/09 - Contract
+# Contract
 
 ## 開発
 

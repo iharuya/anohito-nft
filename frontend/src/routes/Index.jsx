@@ -22,6 +22,10 @@ export const Index = () => {
         </li>
         <li>
           <p>あの人</p>
+          <p>NFT</p>
+        </li>
+        <li>
+          <p>NFT</p>
           <p>ガチャ</p>
         </li>
         <li>
