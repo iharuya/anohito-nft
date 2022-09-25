@@ -1,6 +1,13 @@
 import { Link, NavLink } from "react-router-dom"
 import { ConnectKitButton } from "connectkit"
 
+const verticalSpacerStyle = {
+  width: "2px",
+  background: "#ccc",
+  opacity: "0.5",
+  margin: "0 16px 0 10px",
+}
+
 export const Header = () => {
   return (
     <div>
@@ -33,8 +40,9 @@ export const Header = () => {
                     マイアイテム
                   </NavLink>
                 </li>
-                <li>
-                  <ConnectKitButton label="ウォレットでログイン" showBalance={true} />
+                <div style={verticalSpacerStyle}></div>
+                <li className="nav-item">
+                  <ConnectKitButton label="ウォレットを接続" showBalance={true} />
                 </li>
               </ul>
             </div>
