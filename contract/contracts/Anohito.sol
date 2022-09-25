@@ -25,15 +25,6 @@ contract Anohito is ERC1155, Ownable, ERC1155Supply {
         _setURI(newuri);
     }
 
-    function mint(
-        address account,
-        uint256 id,
-        uint256 amount,
-        bytes memory data
-    ) external onlyOwner {
-        _mint(account, id, amount, data);
-    }
-
     function roll() external payable {
         require(msg.value == rollPrice, "Wrong value");
         require(block.timestamp < deadline, "Roll period ended");
@@ -44,6 +35,11 @@ contract Anohito is ERC1155, Ownable, ERC1155Supply {
         uint256 tokenId_ = uint8(pseudorandomness) % 10; // 0~9
         _mint(msg.sender, tokenId_, 1, "");
         emit Rolled(msg.sender, tokenId_);
+    }
+
+    function withdraw(uint256 amount_) public onlyOwner {
+        (bool sent, ) = msg.sender.call{value: amount_}("");
+        require(sent, "Failed to send value");
     }
 
     function _beforeTokenTransfer(

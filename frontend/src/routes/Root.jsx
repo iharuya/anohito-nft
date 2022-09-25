@@ -13,7 +13,7 @@ import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [chain.mainnet, chain.goerli, chain.hardhat].reverse(),
+  [chain.goerli, chain.hardhat],
   [alchemyProvider({ priority: 0 }), publicProvider({ priority: 1 })]
 )
 

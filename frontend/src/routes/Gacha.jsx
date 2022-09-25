@@ -17,12 +17,12 @@ export const Gacha = () => {
   const { data: signer } = useSigner()
 
   const { data: deadline } = useContractRead({
-    addressOrName: contractAddress[chain?.network || "hardhat"],
+    addressOrName: contractAddress[chain?.network || "goerli"],
     contractInterface: abi,
     functionName: "deadline",
   })
   const { data: rollPrice } = useContractRead({
-    addressOrName: contractAddress[chain?.network || "hardhat"],
+    addressOrName: contractAddress[chain?.network || "goerli"],
     contractInterface: abi,
     functionName: "rollPrice",
   })
