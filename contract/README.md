@@ -3,10 +3,11 @@
 ## 開発
 
 - `yarn`
-- `yarn dev` ローカル環境に EVM チェーンを起動
-- `yarn dev:init` コントラクトのデプロイと指定したアドレスに ETH を送る
 - `yarn fix` コードの整形
 - `yarn compile` コントラクトのコンパイル
+- `yarn dev` ローカル環境に EVM チェーンを起動
+- `yarn deploy --network [localhost|goerli]` コントラクトのデプロイ
+- `yarn copyAbi` ABI をフロントエンドにコピー
 - `yarn hardhat [params]` hardhat を実行
 
 ## `Anohito.sol`コントラクト
