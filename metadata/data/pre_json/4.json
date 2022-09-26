@@ -1,0 +1,15 @@
+{
+  "id": 4,
+  "name": "赤モヒカン",
+  "description": "ソフトモヒカンの人に会った経験がみなさんあるかも知れません。しかしゴリゴリのモヒカンには会ったことがありますか？",
+  "image": null,
+  "properties": {
+    "star": 1
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 1
+    }
+  ]
+}

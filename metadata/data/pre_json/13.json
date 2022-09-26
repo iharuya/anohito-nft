@@ -1,0 +1,15 @@
+{
+  "id": 13,
+  "name": "ひろゆきに憧れている人",
+  "description": "客観的事実を根拠に物事を見定める力は必要です。しかしそれっぽくいえばまかり通ってしまうのが世の中です。",
+  "image": null,
+  "properties": {
+    "star": 3
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 3
+    }
+  ]
+}

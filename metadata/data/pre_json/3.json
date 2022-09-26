@@ -1,0 +1,15 @@
+{
+  "id": 3,
+  "name": "ヒップホップ好きな人",
+  "description": "ヒップホップの世界では帽子を被る際に前髪を出してはいけないというしきたりがあるそうです。",
+  "image": null,
+  "properties": {
+    "star": 1
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 1
+    }
+  ]
+}

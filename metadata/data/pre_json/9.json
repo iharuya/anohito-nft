@@ -1,0 +1,15 @@
+{
+  "id": 9,
+  "name": "偉い人",
+  "description": "偉い人の風格に味を占めてしまった人。過去の話をし始めると裕に２時間は喋り続けてしまう。その元気は何処から？",
+  "image": null,
+  "properties": {
+    "star": 2
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 2
+    }
+  ]
+}

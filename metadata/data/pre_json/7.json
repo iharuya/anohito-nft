@@ -1,0 +1,15 @@
+{
+  "id": 7,
+  "name": "お母ちゃんの言うことは聞くガキ大将",
+  "description": "小学校では自分の意志を突き通し、周りにブイブイ言わせている彼もお母ちゃんには敵わないようです。母は偉大ですね。",
+  "image": null,
+  "properties": {
+    "star": 2
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 2
+    }
+  ]
+}

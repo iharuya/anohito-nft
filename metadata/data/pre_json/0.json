@@ -1,0 +1,15 @@
+{
+  "id": 0,
+  "name": "森のあの人",
+  "description": "いつもは森にいるあの人（？）、森から人里に降りてきてあの人NFTガチャに迷い込んだようです。",
+  "image": null,
+  "properties": {
+    "star": 1
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 1
+    }
+  ]
+}

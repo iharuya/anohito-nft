@@ -1,0 +1,15 @@
+{
+  "id": 2,
+  "name": "サブカルハッピーセット",
+  "description": "最近よく見るサブカルチャー系な彼。サブカル系が過半数を超えた時、それはサブカルチャーと呼べるのでしょうか。",
+  "image": null,
+  "properties": {
+    "star": 1
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 1
+    }
+  ]
+}
