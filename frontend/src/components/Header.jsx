@@ -36,8 +36,8 @@ export const Header = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="myitems" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-                    マイアイテム
+                  <NavLink to="items" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+                    あの人たち
                   </NavLink>
                 </li>
                 <div style={verticalSpacerStyle}></div>

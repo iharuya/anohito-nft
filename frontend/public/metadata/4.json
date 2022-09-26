@@ -1,0 +1,12 @@
+{
+  "id": 4,
+  "name": "名前です",
+  "description": "このキャラの説明",
+  "image": "http://localhost:3000/images/characters/0.png",
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 3
+    }
+  ]
+}

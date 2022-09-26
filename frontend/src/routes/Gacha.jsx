@@ -6,23 +6,20 @@ import { abi } from "../../constants/Anohito.json"
 import ClipLoader from "react-spinners/ClipLoader"
 import Countdown from "react-countdown"
 import { toast } from "react-toastify"
-
-const BsAlert = ({ type = "primary", children }) => {
-  const className = `alert alert-${type} mb-0`
-  return <div className={className}>{children}</div>
-}
+import { BsAlert } from "../components/BsAlert"
+const defaultChain = import.meta.env.VITE_DEFAULT_CHAIN
 
 export const Gacha = () => {
   const { chain } = useNetwork()
   const { data: signer } = useSigner()
 
   const { data: deadline } = useContractRead({
-    addressOrName: contractAddress[chain?.network || "goerli"],
+    addressOrName: contractAddress[chain?.network || defaultChain],
     contractInterface: abi,
     functionName: "deadline",
   })
   const { data: rollPrice } = useContractRead({
-    addressOrName: contractAddress[chain?.network || "goerli"],
+    addressOrName: contractAddress[chain?.network || defaultChain],
     contractInterface: abi,
     functionName: "rollPrice",
   })
@@ -73,7 +70,7 @@ export const Gacha = () => {
 
   return (
     <div className="text-center mt-5">
-      <h1 className="mb-4">あの人NFTガチャ</h1>
+      <h1 className="mb-5">あの人NFTガチャ</h1>
       {/* countdown */}
       <div className="mb-4">
         <ClipLoader loading={!deadline} color="#cdcdcd" />
