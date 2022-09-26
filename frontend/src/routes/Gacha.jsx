@@ -9,6 +9,43 @@ import { toast } from "react-toastify"
 import { BsAlert } from "../components/BsAlert"
 const defaultChain = import.meta.env.VITE_DEFAULT_CHAIN
 
+const Counter = ({ days, hours, minutes, seconds }) => {
+  return (
+    <>
+    <h4>You only have</h4>
+    <div className="container position-relative" style={{ maxWidth: "580px" }}>
+      <div className="row">
+        <div className="col">
+          <div className={styles.card}>
+            <div className={styles.countdownValue}>{days}</div>
+            <div className={styles.couUnit}>Days</div>
+          </div>
+        </div>
+        <div className="col">
+          <div className={styles.card}>
+            <div className={styles.countdownValue}>{hours}</div>
+            <div className={styles.couUnit}>Hours</div>
+          </div>
+        </div>
+        <div className="col">
+          <div className={styles.card}>
+            <div className={styles.countdownValue}>{minutes}</div>
+            <div className={styles.couUnit}>Mins</div>
+          </div>
+        </div>
+        <div className="col">
+          <div className={styles.card}>
+            <div className={styles.countdownValue}>{seconds}</div>
+            <div className={styles.couUnit}>Secs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4>to play</h4>
+    </>
+  )
+}
+
 export const Gacha = () => {
   const { chain } = useNetwork()
   const { data: signer } = useSigner()
@@ -70,14 +107,14 @@ export const Gacha = () => {
 
   return (
     <div className="text-center mt-5">
-      <h1 className="mb-5">あの人NFTガチャ</h1>
+      <h1 className="mb-5"><span className={styles.title}>誰に会えるかな？</span></h1>
       {/* countdown */}
-      <div className="mb-4">
+      <div className="mb-5">
         <ClipLoader loading={!deadline} color="#cdcdcd" />
         {deadline && (
-          <Countdown date={deadline.toNumber() * 1000}>
-            <p>終了</p>
-          </Countdown>
+            <Countdown renderer={Counter} date={deadline.toNumber() * 1000}>
+              <p>終了</p>
+            </Countdown>
         )}
       </div>
       {/* Roll button */}
