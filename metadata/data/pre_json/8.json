@@ -1,0 +1,15 @@
+{
+  "id": 8,
+  "name": "秋が似合う人",
+  "description": "秋が似合う女性。本を読み、運動をし、たくさん食べる、全ての〇〇の秋を制覇しようとしています。",
+  "image": null,
+  "properties": {
+    "star": 2
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 2
+    }
+  ]
+}

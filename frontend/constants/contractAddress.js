@@ -1,5 +1,4 @@
 export default {
-  mainnet: "",
-  goerli: "0xF77F663f79032D0A4A3Dcaf941cAb454d142e654",
+  goerli: "0x3669920f459eAa65E9120a0e69394d8BdBba9693",
   hardhat: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
 }

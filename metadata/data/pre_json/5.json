@@ -1,0 +1,15 @@
+{
+  "id": 5,
+  "name": "イケメン",
+  "description": "いつでも人生を謳歌していると同時に一部の人々の自信を無くさせるイケメンくん。人々の自己肯定感はトレードオフの関係にあるのでしょうか。",
+  "image": null,
+  "properties": {
+    "star": 1
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 1
+    }
+  ]
+}

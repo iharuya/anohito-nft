@@ -6,11 +6,8 @@ import { abi } from "../../constants/Anohito.json"
 import ClipLoader from "react-spinners/ClipLoader"
 import Countdown from "react-countdown"
 import { toast } from "react-toastify"
-
-const BsAlert = ({ type = "primary", children }) => {
-  const className = `alert alert-${type} mb-0`
-  return <div className={className}>{children}</div>
-}
+import { BsAlert } from "../components/BsAlert"
+const defaultChain = import.meta.env.VITE_DEFAULT_CHAIN
 
 const Counter = ({ days, hours, minutes, seconds }) => {
   return (
@@ -54,12 +51,12 @@ export const Gacha = () => {
   const { data: signer } = useSigner()
 
   const { data: deadline } = useContractRead({
-    addressOrName: contractAddress[chain?.network || "hardhat"],
+    addressOrName: contractAddress[chain?.network || defaultChain],
     contractInterface: abi,
     functionName: "deadline",
   })
   const { data: rollPrice } = useContractRead({
-    addressOrName: contractAddress[chain?.network || "hardhat"],
+    addressOrName: contractAddress[chain?.network || defaultChain],
     contractInterface: abi,
     functionName: "rollPrice",
   })

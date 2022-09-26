@@ -9,7 +9,7 @@ async function main() {
   console.log("Deployer balance:", ethers.utils.formatEther(await deployer.getBalance()).toString())
 
   const factory = await ethers.getContractFactory("Anohito")
-  const uri = "http://localhost:8001"
+  const uri = "ipfs://QmUvgwkmQRRZLL4iFn4kUCQNCkrGc5B1T4adgjipRAmtNT/{id}.json"
   const rollPrice = ethers.utils.parseEther("0.01")
   const rollPeriod = 7 * 86400
   const params = [uri, rollPrice, rollPeriod]

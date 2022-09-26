@@ -36,7 +36,7 @@ export const Header = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="myitems" style={{ fontFamily: "Kosugi Maru" }} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+                  <NavLink to="items" style={{ fontFamily: "Kosugi Maru" }} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
                     マイアイテム
                   </NavLink>
                 </li>

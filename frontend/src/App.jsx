@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Root } from "./routes/Root"
 import { Index } from "./routes/Index"
 import { Gacha } from "./routes/Gacha"
-import { MyItems } from "./routes/MyItems"
+import { Items } from "./routes/Items"
 import { Error } from "./routes/Error"
 
 const router = createBrowserRouter([
@@ -20,8 +20,8 @@ const router = createBrowserRouter([
         element: <Gacha />,
       },
       {
-        path: "myitems",
-        element: <MyItems />,
+        path: "items",
+        element: <Items />,
       },
     ],
   },

@@ -1,0 +1,15 @@
+{
+  "id": 14,
+  "name": "話を聞く人",
+  "description": "女性にモテるためには聞き上手になると良いらしいです。さらにチューハイを片手に持てばそれは鬼に金棒。",
+  "image": null,
+  "properties": {
+    "star": 3
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 3
+    }
+  ]
+}

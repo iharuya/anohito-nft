@@ -1,0 +1,15 @@
+{
+  "id": 10,
+  "name": "明治時代の人",
+  "description": "明治時代によく似合うメガネをした人。白黒になるだけで文豪っぽくなってしまうのはなぜでしょうか。",
+  "image": null,
+  "properties": {
+    "star": 2
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 2
+    }
+  ]
+}

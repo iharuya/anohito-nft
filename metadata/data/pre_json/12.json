@@ -1,0 +1,15 @@
+{
+  "id": 12,
+  "name": "成田◯輔に憧れている人",
+  "description": "どの時代でも賢い人は憧れの対象です。やはり時代は日本の大学ではなく海外の大学なのでしょうか。",
+  "image": null,
+  "properties": {
+    "star": 3
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 3
+    }
+  ]
+}

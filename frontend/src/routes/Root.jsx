@@ -12,10 +12,14 @@ import { ConnectKitProvider } from "connectkit"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
-const { chains, provider, webSocketProvider } = configureChains(
-  [chain.mainnet, chain.goerli, chain.hardhat].reverse(),
-  [alchemyProvider({ priority: 0 }), publicProvider({ priority: 1 })]
-)
+let appChains = [chain.goerli, chain.hardhat]
+if (import.meta.env.DEV) {
+  appChains = appChains.reverse()
+}
+const { chains, provider, webSocketProvider } = configureChains(appChains, [
+  alchemyProvider({ priority: 0 }),
+  publicProvider({ priority: 1 }),
+])
 
 const client = createClient({
   autoConnect: true,

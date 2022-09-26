@@ -1,0 +1,15 @@
+{
+  "id": 6,
+  "name": "横文字好きな人",
+  "description": "横文字に何処となく知識に奥行きを持たせる効果があるようです。しかし密度を保たなければスカスカになるようです。非常にインタレスティングですね。",
+  "image": null,
+  "properties": {
+    "star": 1
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 1
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": 11,
+  "name": "マスクを外しにくくなった人",
+  "description": "顔の半分が隠れるマスクをつけると容姿がよく見えるらしいです。カオナシがモテる日もそう遠くないかもしれません。",
+  "image": null,
+  "properties": {
+    "star": 2
+  },
+  "attributes": [
+    {
+      "trait_type": "star",
+      "value": 2
+    }
+  ]
+}
