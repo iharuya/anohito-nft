@@ -37,6 +37,22 @@ contract Anohito is ERC1155, Ownable, ERC1155Supply {
         emit Rolled(msg.sender, tokenId_);
     }
 
+    function totalSupplyAll() external view returns (uint256[10] memory) {
+        uint256[10] memory supplies;
+        for (uint256 i = 0; i < 10; i++) {
+            supplies[i] = totalSupply(i);
+        }
+        return supplies;
+    }
+
+    function balanceOfAll(address account_) external view returns (uint256[10] memory) {
+        uint256[10] memory balances;
+        for (uint256 i = 0; i < 10; i++) {
+            balances[i] = balanceOf(account_, i);
+        }
+        return balances;
+    }
+
     function withdraw(uint256 amount_) public onlyOwner {
         (bool sent, ) = msg.sender.call{value: amount_}("");
         require(sent, "Failed to send value");
