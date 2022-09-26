@@ -13,6 +13,15 @@ export const Result = () => {
     textAlign: "center",
   }
 
+  const KosugiMaru = {
+    fontFamily: "Kosugi Maru"
+  }
+
+  const Button = {
+    backgroundColor: "white",
+    color: "#53e3a6"
+  }
+
   const textTop = {
     paddingTop: "20px",
     color: "white",
@@ -21,31 +30,33 @@ export const Result = () => {
   }
 
   return (
-    <form>
-      <h1 style={textTop}>結果発表</h1>
-      <br></br>
-      <h2
-        style={{
-          fontFamily: "Kosugi Maru",
-          fontSize: "50px",
-          textAlign: "center",
-          marginTop: "-30px",
-          color: "white",
-        }}
-      >
-        You got it!
-      </h2>
-      <div style={{ textAlign: "center", paddingTop: "30px" }}>
-        <Rare />
+    <main style={{ minHeight: "100vh" }}>
+      <div className="container text-light text-center pt-3">
+        <h1 style={textTop}>結果発表</h1>
+        <br></br>
+        <h2
+          style={{
+            fontFamily: "Kosugi Maru",
+            textAlign: "center",
+            marginTop: "-30px",
+            color: "white",
+          }}
+        >
+          You got it!
+        </h2>
+        <div style={{ textAlign: "center", paddingTop: "30px" }}>
+          <Rare />
+        </div>
+        <figure style={textCenter}>
+          <img width="550"></img>
+        </figure>
+        <br></br>
+        <h3 style={KosugiMaru}>母ちゃんの言うことは聞くガキ大将</h3>
+        <p style={KosugiMaru}>映画で大活躍</p>
+        <button style={Button}>
+          確認
+        </button>
       </div>
-      <figure style={textCenter}>
-        <img src="/images/characters/1.jpg" width="550"></img>
-      </figure>
-      <br></br>
-      <h3 style={{ color: "white" }}>母ちゃんの言うことは聞くガキ大将</h3>
-      <button style={{ marginTop: "50px" }} onClick={onMovePage}>
-        確認
-      </button>
-    </form>
+    </main>
   )
 }
