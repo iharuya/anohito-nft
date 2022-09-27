@@ -8,7 +8,7 @@ import { WagmiConfig, createClient, configureChains, chain } from "wagmi"
 import { alchemyProvider } from "wagmi/providers/alchemy"
 import { publicProvider } from "wagmi/providers/public"
 import { MetaMaskConnector } from "wagmi/connectors/metaMask"
-import { ConnectKitProvider } from "connectkit"
+import { ConnectKitProvider, ConnectKitButton } from "connectkit"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
@@ -28,6 +28,13 @@ const client = createClient({
   webSocketProvider,
 })
 
+const mobileConnectWrapper = {
+  position: "fixed",
+  bottom: "24px",
+  left: "50%",
+  transform: "translate(-50%, 0)" 
+}
+
 export const Root = () => {
   return (
     <>
@@ -41,6 +48,11 @@ export const Root = () => {
               <Outlet />
             </div>
           </main>
+          <div className="d-md-none" style={mobileConnectWrapper}>
+            <ConnectKitButton label="ウォレットを接続" customTheme={{
+              "--ck-connectbutton-box-shadow": "0 4px 12px 1px #72ba73"
+            }} />
+          </div>
           <Footer />
         </ConnectKitProvider>
       </WagmiConfig>

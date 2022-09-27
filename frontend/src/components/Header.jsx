@@ -11,7 +11,7 @@ const verticalSpacerStyle = {
 export const Header = () => {
   return (
     <div>
-      <header className="w-100 fixed-top  border-bottom border-3 shadow">
+      <header className="w-100 fixed-top border-bottom border-3 shadow">
         <nav className="navbar navbar-dark navbar-expand bg-primary text-light py-0">
           <div className="container-fluid">
             <div>
@@ -23,7 +23,7 @@ export const Header = () => {
                   height="64"
                   className="d-inline-block align-text-top"
                 />
-                <span style={{ fontFamily: "Pacifico" }} className="text-reset">
+                <span style={{ fontFamily: "Pacifico" }} className="text-reset d-none d-md-inline">
                   YOU-KNOW-WHO
                 </span>
               </Link>
@@ -40,8 +40,8 @@ export const Header = () => {
                     マイアイテム
                   </NavLink>
                 </li>
-                <div style={verticalSpacerStyle}></div>
-                <li className="nav-item">
+                <div style={verticalSpacerStyle} className="d-none d-md-block"></div>
+                <li className="nav-item d-none d-md-block">
                   <ConnectKitButton label="ウォレットを接続" showBalance={true} />
                 </li>
               </ul>
