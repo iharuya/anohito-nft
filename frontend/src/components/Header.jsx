@@ -18,13 +18,7 @@ export const Header = () => {
           <div className="container-fluid">
             <div>
               <Link to="/" className="navbar-brand d-flex align-items-center">
-                <img
-                  src="/images/icon.png"
-                  alt="Logo"
-                  width="48"
-                  height="48"
-                  className="d-inline-block"
-                />
+                <img src="/images/icon.png" alt="Logo" width="48" height="48" className="d-inline-block" />
                 <span style={{ fontFamily: "Pacifico" }} className="text-reset d-none d-md-inline">
                   YOU-KNOW-WHO
                 </span>
@@ -56,12 +50,12 @@ export const Header = () => {
                 </li>
                 <li className="nav-item d-flex align-items-center ps-3">
                   <a href={etherscanUrl} target="_blank">
-                    <img src="/public/images/etherscan-logo.webp" width={32} height={32} />
+                    <img src="/images/etherscan-logo.webp" width={32} height={32} />
                   </a>
                 </li>
                 <li className="nav-item d-flex align-items-center ps-3">
                   <a href={openseaUrl} target="_blank">
-                    <img src="/public/images/opensea-logo.png" width={32} height={32} />
+                    <img src="/images/opensea-logo.png" width={32} height={32} />
                   </a>
                 </li>
               </ul>
