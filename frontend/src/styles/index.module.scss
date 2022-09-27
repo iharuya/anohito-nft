@@ -1,19 +1,21 @@
 .words {
-  margin: -10% auto;
+
+  margin: -100px auto;
   padding: 0;
   font-family: "Kosugi maru";
-  font-size: 65px;
+  font-size: 60px;
   font-weight: 900;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   transform: translate3d(-50%, 30%, 0);
   z-index: 100;
   list-style-type: none;
 
+
   p {
-    height: 60px;
+    height: 50px;
     line-height: 40px;
-    padding: 0 10px;
+    padding: 0 0;
     transition: all 0.2s ease-in-out;
     transform: translate3d(0, -60px, 0);
     vertical-align: top;
@@ -21,7 +23,7 @@
   }
 
   &:hover p {
-    transform: translate3d(0, -180px, 0);
+    transform: translate3d(0, 20px, 0);
   }
 
   li {
@@ -60,5 +62,9 @@
     &:nth-child(6) {
       left: 240px;
     }
+    &:nth-child(7) {
+      left: 280px;
+    }
   }
 }
+
