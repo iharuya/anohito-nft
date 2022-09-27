@@ -32,7 +32,7 @@ const mobileConnectWrapper = {
   position: "fixed",
   bottom: "24px",
   left: "50%",
-  transform: "translate(-50%, 0)" 
+  transform: "translate(-50%, 0)",
 }
 
 export const Root = () => {
@@ -49,9 +49,12 @@ export const Root = () => {
             </div>
           </main>
           <div className="d-md-none" style={mobileConnectWrapper}>
-            <ConnectKitButton label="ウォレットを接続" customTheme={{
-              "--ck-connectbutton-box-shadow": "0 4px 12px 1px #72ba73"
-            }} />
+            <ConnectKitButton
+              label="ウォレットを接続"
+              customTheme={{
+                "--ck-connectbutton-box-shadow": "0 4px 12px 1px #72ba73",
+              }}
+            />
           </div>
           <Footer />
         </ConnectKitProvider>

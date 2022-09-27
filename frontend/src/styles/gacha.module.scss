@@ -1,6 +1,6 @@
-* {
-  box-sizing: border-box;
-}
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
 
 .button {
   margin-top: 14px;
@@ -13,37 +13,56 @@
   color: #53e3a6;
   font-weight: 800;
   font-size: 2.5rem;
+
   &:disabled {
     opacity: 0.5;
   }
 }
-.countdown {
-  display: block;
-  display: inline-block;
-  margin: 10px;
-  min-width: 270px;
-  padding: 20px 50px;
-  font-size: 1.5rem;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 5px;
-  box-shadow: 0.5px 2.5px 5px #626262;
-}
-.card {
-  display: block;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 5px;
-  display: inline-block;
-  margin: 10px;
-  min-width: 100px;
-  padding-bottom: 15px;
-  box-shadow: 0.2px 1px 2px #626262;
-}
-.countdownValue {
-  color: rgb(33, 60, 55);
-  font-size: 2rem;
-  font-weight: bolder;
-  font-size: 2.5rem;
+
+.countdown_panel {
+  margin: 0 4px;
+  @include media-breakpoint-up(md) {
+    margin: 0 8px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin: 0 16px;
+  }
+
+  span {
+    display: block;
+    background-color: white;
+    &:nth-child(1) {
+      color: white;
+      font-size: 48px;
+      padding: 6px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-bottom: none;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 5px 20px rgba(79, 255, 188, 0.5);
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+
+      @include media-breakpoint-up(md) {
+        padding: 12px;
+        font-size: 72px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding: 24px;
+        font-size: 128px;
+      }
+    }
+    &:nth-child(2) {
+      color: rgb(14, 61, 47);
+      padding: 6px 0;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 24px;
+      }
+    }
+  }
 }

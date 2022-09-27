@@ -5,7 +5,7 @@ const verticalSpacerStyle = {
   width: "2px",
   background: "#ccc",
   opacity: "0.5",
-  margin: "0 16px 0 10px"
+  margin: "0 16px 0 10px",
 }
 
 export const Header = () => {
@@ -31,12 +31,20 @@ export const Header = () => {
             <div className="ml-auto">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <NavLink to="gacha" style={{ fontFamily: "Kosugi Maru" }} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+                  <NavLink
+                    to="gacha"
+                    style={{ fontFamily: "Kosugi Maru" }}
+                    className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                  >
                     ガチャを回す
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="items" style={{ fontFamily: "Kosugi Maru" }} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+                  <NavLink
+                    to="items"
+                    style={{ fontFamily: "Kosugi Maru" }}
+                    className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+                  >
                     マイアイテム
                   </NavLink>
                 </li>

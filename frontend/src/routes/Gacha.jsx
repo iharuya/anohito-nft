@@ -70,12 +70,10 @@ export const Gacha = () => {
 
   return (
     <div className="text-center mt-5">
-      <h1 className="mb-5 display-2">誰に会えるかな？</h1>
+      <h1 className="mb-3 mb-md-5 display-2">誰に会えるかな？</h1>
       <div className="mb-5">
         <ClipLoader loading={!deadline} color="#cdcdcd" />
-        {deadline && (
-          <Countdown renderer={Counter} date={deadline.toNumber() * 1000} />
-        )}
+        {deadline && <Countdown renderer={Counter} date={deadline.toNumber() * 1000} />}
       </div>
       <div className="mb-4">
         {!signer && <BsAlert>ウォレットを接続して下さい</BsAlert>}
@@ -93,41 +91,34 @@ export const Gacha = () => {
   )
 }
 
-const Counter = ({ days, hours, minutes, seconds, completed }) => {
-  if (completed) return (
-    <BsAlert>
-      <p className="text-center mb-0 display-5">ガチャは終了しました</p>
-    </BsAlert>
-  )
+const Counter = ({ completed, formatted }) => {
+  if (completed)
+    return (
+      <BsAlert>
+        <p className="text-center mb-0 display-5">ガチャは終了しました</p>
+      </BsAlert>
+    )
+  let { days, hours, minutes, seconds } = formatted
+
   return (
     <div>
-      <p className="display-3">締切まであと</p>
-      <div className="container position-relative" style={{ maxWidth: "580px" }}>
-        <div className="row">
-          <div className="col">
-            <div className={styles.card}>
-              <div className={styles.countdownValue}>{days}</div>
-              <div className={styles.couUnit}>Days</div>
-            </div>
-          </div>
-          <div className="col">
-            <div className={styles.card}>
-              <div className={styles.countdownValue}>{hours}</div>
-              <div className={styles.couUnit}>Hours</div>
-            </div>
-          </div>
-          <div className="col">
-            <div className={styles.card}>
-              <div className={styles.countdownValue}>{minutes}</div>
-              <div className={styles.couUnit}>Mins</div>
-            </div>
-          </div>
-          <div className="col">
-            <div className={styles.card}>
-              <div className={styles.countdownValue}>{seconds}</div>
-              <div className={styles.couUnit}>Secs</div>
-            </div>
-          </div>
+      <p className="display-3 mb-3 mb-md-4">締切まであと</p>
+      <div className="d-flex justify-content-center">
+        <div className={styles.countdown_panel}>
+          <span>{days}</span>
+          <span>日</span>
+        </div>
+        <div className={styles.countdown_panel}>
+          <span>{hours}</span>
+          <span>時間</span>
+        </div>
+        <div className={styles.countdown_panel}>
+          <span>{minutes}</span>
+          <span>分</span>
+        </div>
+        <div className={styles.countdown_panel}>
+          <span>{seconds}</span>
+          <span>秒</span>
         </div>
       </div>
     </div>
