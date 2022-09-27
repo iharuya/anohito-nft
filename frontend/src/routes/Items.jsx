@@ -40,7 +40,7 @@ export const Items = () => {
 
   return (
     <div className="text-center mt-5">
-      <h1 className="mb-5">あの人たち</h1>
+      <h1 className="mb-3 mb-md-5 display-2">あの人たち</h1>
       {!connectedAddress && (
         <div className="mb-5">
           <BsAlert>ウォレットを接続して自分の保有量をチェックしよう</BsAlert>
@@ -49,10 +49,10 @@ export const Items = () => {
       {!items ? (
         <BeatLoader color="#ffffff" size={16} />
       ) : (
-        <div className="row">
+        <div className="row gx-2 gy-2 mb-4">
           {items.map((item) => (
-            <div key={item.tokenId} className="col col-12 col-md-6 col-lg-4 mb-4">
-              <Item item={item} />
+            <div key={item.tokenId} className="col col-6 col-md-4 col-lg-3">
+              <Item key={item.tokenId} item={item} />
             </div>
           ))}
         </div>
