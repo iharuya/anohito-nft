@@ -14,12 +14,12 @@ export const Result = () => {
   }
 
   const KosugiMaru = {
-    fontFamily: "Kosugi Maru"
+    fontFamily: "Kosugi Maru",
   }
 
   const Button = {
     backgroundColor: "white",
-    color: "#53e3a6"
+    color: "#53e3a6",
   }
 
   const textTop = {
@@ -53,9 +53,7 @@ export const Result = () => {
         <br></br>
         <h3 style={KosugiMaru}>母ちゃんの言うことは聞くガキ大将</h3>
         <p style={KosugiMaru}>映画で大活躍</p>
-        <button style={Button}>
-          確認
-        </button>
+        <button style={Button}>確認</button>
       </div>
     </main>
   )
