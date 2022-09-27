@@ -13,7 +13,7 @@ const Counter = ({ days, hours, minutes, seconds }) => {
   return (
     <>
     <h4>You only have</h4>
-    <div className="container position-relative" style={{ maxWidth: "580px" }}>
+    <div className="container position-relative" style={{ maxWidth: "50%" }}>
       <div className="row">
         <div className="col">
           <div className={styles.card}>
