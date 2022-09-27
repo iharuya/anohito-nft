@@ -7,6 +7,7 @@ import ClipLoader from "react-spinners/ClipLoader"
 import Countdown from "react-countdown"
 import { toast } from "react-toastify"
 import { BsAlert } from "../components/BsAlert"
+import { useState, useEffect } from "react"
 const defaultChain = import.meta.env.VITE_DEFAULT_CHAIN
 
 export const Gacha = () => {
@@ -23,7 +24,13 @@ export const Gacha = () => {
     contractInterface: abi,
     functionName: "rollPrice",
   })
-  const isWritable = signer && contractAddress[chain?.network] && rollPrice
+  const [onGoing, setOnGoing] = useState(false)
+  const isWritable = signer && contractAddress[chain?.network] && rollPrice && onGoing
+  useEffect(() => {
+    if (deadline) {
+      setOnGoing(deadline.toNumber() * 1000 > Date.now())
+    }
+  }, [])
 
   const inlineRollPrice = () => {
     if (rollPrice) {

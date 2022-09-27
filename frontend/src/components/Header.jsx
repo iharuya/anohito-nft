@@ -17,7 +17,7 @@ export const Header = () => {
         <nav className="navbar navbar-dark navbar-expand bg-primary text-light py-0">
           <div className="container-fluid">
             <div>
-              <Link to="/" className="navbar-brand d-flex align-items-center">
+              <Link to="/" className="navbar-brand d-flex align-items-center me-0">
                 <img src="/images/icon.png" alt="Logo" width="48" height="48" className="d-inline-block" />
                 <span style={{ fontFamily: "Pacifico" }} className="text-reset d-none d-md-inline">
                   YOU-KNOW-WHO
@@ -48,12 +48,12 @@ export const Header = () => {
                 <li className="nav-item d-none d-md-block">
                   <ConnectKitButton label="ウォレットを接続" showBalance={true} />
                 </li>
-                <li className="nav-item d-flex align-items-center ps-3">
+                <li className="nav-item d-flex align-items-center ps-1 ps-md-3">
                   <a href={etherscanUrl} target="_blank">
                     <img src="/images/etherscan-logo.webp" width={32} height={32} />
                   </a>
                 </li>
-                <li className="nav-item d-flex align-items-center ps-3">
+                <li className="nav-item d-flex align-items-center ps-1 ps-md-3">
                   <a href={openseaUrl} target="_blank">
                     <img src="/images/opensea-logo.png" width={32} height={32} />
                   </a>

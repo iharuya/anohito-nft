@@ -33,6 +33,7 @@ const mobileConnectWrapper = {
   bottom: "24px",
   left: "50%",
   transform: "translate(-50%, 0)",
+  zIndex: "100",
 }
 
 export const Root = () => {
