@@ -43,7 +43,7 @@ export const Root = () => {
           <Header />
           <Background />
           <ToastContainer position="top-right" autoClose={false} draggable />
-          <main style={{ minHeight: "100vh" }}>
+          <main style={{ minHeight: "100vh", overflow: "hidden" }}>
             <div className="container text-light">
               <Outlet />
             </div>
@@ -52,7 +52,7 @@ export const Root = () => {
             <ConnectKitButton
               label="ウォレットを接続"
               customTheme={{
-                "--ck-connectbutton-box-shadow": "0 4px 12px 1px #72ba73",
+                "--ck-connectbutton-box-shadow": "0 4px 12px -6px #509898",
               }}
             />
           </div>

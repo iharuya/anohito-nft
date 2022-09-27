@@ -1,26 +1,39 @@
 @import "bootstrap/scss/_functions";
 @import "bootstrap/scss/_variables";
 @import "bootstrap/scss/mixins/_breakpoints";
+$primary: #509898;
 
 .button {
   margin-top: 14px;
-  padding: 7px 40px;
+  padding: 8px 40px;
   border: none;
   border-radius: 5px;
-  box-shadow: 1px 5px 10px #626262;
+  box-shadow: 0 5px 10px #3535354d;
   cursor: pointer;
   background-color: white;
-  color: #53e3a6;
-  font-weight: 800;
-  font-size: 2.5rem;
+  color: $primary;
+  font-weight: 700;
+  font-size: 24px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   &:disabled {
     opacity: 0.5;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 36px;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 48px;
   }
 }
 
 .countdown_panel {
   margin: 0 4px;
+
   @include media-breakpoint-up(md) {
     margin: 0 8px;
   }
@@ -36,11 +49,10 @@
       font-size: 48px;
       padding: 6px;
       background-color: rgba(255, 255, 255, 0.2);
-      border: 2px solid rgba(255, 255, 255, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.2);
       border-bottom: none;
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
-      box-shadow: 0 5px 20px rgba(79, 255, 188, 0.5);
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
 
@@ -55,7 +67,7 @@
       }
     }
     &:nth-child(2) {
-      color: rgb(14, 61, 47);
+      color: $primary;
       padding: 6px 0;
       border-bottom-left-radius: 16px;
       border-bottom-right-radius: 16px;
