@@ -6,7 +6,7 @@ const itemStyle = (star) => {
   star = star ? parseInt(star) : 0
   const config = [
     {
-      background: "#cdcdcd",
+      background: "#ffffff",
       textColor: "#333333",
     },
     {
@@ -59,14 +59,18 @@ export const Item = ({ item }) => {
   }, [])
 
   return (
-    <div className="card h-100" style={itemStyle(metadata?.properties?.star)}>
+    <div className={`card h-100 ${item.balance > 0 || "opacity-50"}`} style={itemStyle(metadata?.properties?.star)}>
       {metadata ? (
         <div className="onchain mb-1">
           <div>
             <Img
-              src={metadata.image}
+              src={[metadata.image, "/images/face-404.png"]}
               className="img-fluid"
-              loader={<FadeLoader className="mx-auto my-5" color="#cdcdcd" />}
+              loader={
+                <div className="d-flex justify-content-center my-5">
+                  <FadeLoader color="#cdcdcd" />
+                </div>
+              }
             />
           </div>
           <Stars star={metadata.properties.star} />
